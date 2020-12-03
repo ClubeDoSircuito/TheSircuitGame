@@ -1,4 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0.743408, 8.54785, 0, 0, 0, 0, 477.502, 2.19104, 0, 0, 0, 0, 483.859, 716.269, 0, 0, 0, 0, 4.9812, 714.151, 0, 0, 0, 0, 0.743408, 8.54785 )
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,5 +14,14 @@ wait_time = 0.5
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
 
 [node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 240, 450 )
+
+[node name="CaminhoTurba" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="LocalGeracaoTurba" type="PathFollow2D" parent="CaminhoTurba"]
+position = Vector2( 0.743408, 8.54785 )
+rotation = -0.0133329
