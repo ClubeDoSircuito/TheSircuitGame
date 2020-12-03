@@ -9,9 +9,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Create Persona" type="Label" parent="VBoxContainer"]
 margin_right = 405.0
 margin_bottom = 14.0
+align = 1
+max_lines_visible = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 18.0
