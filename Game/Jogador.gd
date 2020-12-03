@@ -1,6 +1,5 @@
 extends Area2D
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,7 +11,7 @@ var screen_size  # Size of the game window.
 func _ready():
 	screen_size = get_viewport_rect().size
 
-func _proccess():
+func _proccess(delta):
 	var velocity = Vector2()  # The player's movement vector.
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
@@ -27,6 +26,10 @@ func _proccess():
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()
+		
+	position += velocity * delta
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, screen_size.y)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
