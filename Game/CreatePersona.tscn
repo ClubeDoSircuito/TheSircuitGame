@@ -1,0 +1,33 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 405.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreatePersona" type="Label" parent="VBoxContainer"]
+margin_right = 405.0
+margin_bottom = 14.0
+align = 1
+max_lines_visible = 1
+
+[node name="Node" type="Node" parent="VBoxContainer/CreatePersona"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 405.0
+margin_bottom = 18.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 22.0
+margin_right = 405.0
+margin_bottom = 22.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 26.0
+margin_right = 405.0
+margin_bottom = 26.0
